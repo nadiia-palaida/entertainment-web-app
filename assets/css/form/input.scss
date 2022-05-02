@@ -1,0 +1,18 @@
+.input {
+  width: 227px;
+  padding: 0 16px 17px 16px;
+  border-bottom: 1px solid $border-color;
+
+  &::placeholder {
+    font-family: "Outfit-Light", sans-serif;
+    font-size: 15px;
+    line-height: 19px;
+    opacity: 0.5;
+    color: $text;
+  }
+
+  &:focus {
+    border-color: $text;
+    caret-color: $logo-color;
+  }
+}

@@ -13,6 +13,7 @@
         <div class="col-3">
           <div class="title-l">Color</div>
         </div>
+
         <div class="col-9">
           <div class="row">
             <div v-for="item in colors" class="col-4">
@@ -88,17 +89,70 @@
         </div>
       </div>
     </div>
+
+    <div class="design-block">
+      <div class="row">
+        <div class="col-3">
+          <div class="title-l">Interactive Elements</div>
+        </div>
+        <div class="col-9">
+          <div class="design-inputs-wrap">
+            <div class="design-input-wrap">
+              <div class="row">
+                <div class="col-7">
+                  <TheInput name="design-example" placeholder="Email address"/>
+                </div>
+                <div class="col-2 flex align-center">
+                  <div class="text-m text-opacity">
+                    Input - Empty
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="design-input-wrap">
+              <div class="row">
+                <div class="col-7">
+                  <TheInput v-model="exampleInput" name="design-example" placeholder="Email address"/>
+                </div>
+                <div class="col-2 flex align-center">
+                  <div class="text-m text-opacity">
+                    Input - Filled
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="design-input-wrap">
+              <div class="row">
+                <div class="col-7">
+                  <TheInput v-model="exampleInput" rules="required" name="design-example" placeholder="Email address"/>
+                </div>
+                <div class="col-2 flex align-center">
+                  <div class="text-m text-opacity">
+                    Input - Active
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Icon from "../components/Icon";
+import Icon from "../components/icon";
+import TheInput from "../components/form/the-input";
 
 export default {
   name: 'design-components',
-  components: {Icon},
+  components: {Icon, TheInput},
   data() {
     return {
+      exampleInput: 'john@example.com',
+
       colors: [
         {
           name: 'FC4747',
