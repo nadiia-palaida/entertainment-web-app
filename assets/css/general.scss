@@ -1,0 +1,96 @@
+* {
+  font-family: "Outfit-Light", sans-serif;
+  color: $text;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.modal {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background: $bg-color;
+}
+
+.button {
+  &:hover {
+
+  }
+}
+
+.title-m {
+  font-family: "Outfit-Light", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.title-l {
+  font-family: "Outfit-Light", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+}
+
+.title-s {
+  font-family: "Outfit-Medium", sans-serif;
+  font-size: 24px;
+  line-height: 23px;
+}
+
+.title-xs {
+  font-family: "Outfit-Medium", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.text-opacity {
+  opacity: 0.75;
+}
+
+.text-m {
+  font-family: "Outfit-Light", sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.text-s {
+  font-family: "Outfit-Light", sans-serif;
+  font-size: 13px;
+  line-height: 16.38px;
+}
+
+
