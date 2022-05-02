@@ -1,4 +1,4 @@
-# rating-component
+# entertainment-web-app
 
 ## Build Setup
 
