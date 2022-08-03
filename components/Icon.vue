@@ -1,5 +1,5 @@
 <template>
-  <svg class="icon" :style="`color: ${color}`">
+  <svg class="icon" :style="`color: ${color}`" :width="width" :height="height">
     <use :xlink:href="`${srcDir}#icon-${src}`"></use>
   </svg>
 </template>
@@ -9,7 +9,9 @@ export default {
   name: "Icon",
   props: {
     src: {type: String, required: true},
-    color: {type: String, default: '#000'}
+    color: {type: String, default: '#000'},
+    width: {type: String, default: '20px'},
+    height: {type: String, default: '20px'}
   },
   computed: {
     srcDir() {

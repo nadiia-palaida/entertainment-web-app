@@ -1,7 +1,11 @@
 .input {
-  width: 227px;
+  width: 100%;
   padding: 0 16px 17px 16px;
   border-bottom: 1px solid $border-color;
+
+  &-wrapper {
+    position: relative;
+  }
 
   &::placeholder {
     font-family: "Outfit-Light", sans-serif;
@@ -14,5 +18,17 @@
   &:focus {
     border-color: $text;
     caret-color: $logo-color;
+  }
+
+  &.error {
+    border-color: $logo-color;
+  }
+
+  &-errors {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    font-size: 13px;
+    color: $logo-color;
   }
 }

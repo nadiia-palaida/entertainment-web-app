@@ -1,12 +1,14 @@
 <template>
   <div class="input-wrap">
     <ValidationProvider :rules="rules" v-slot="{ errors }">
-      <label>
-        <span v-if="label" class="input-lapel-text">{{ label }}</span>
-        <input :name="name" :type="type" :value="value" :placeholder="placeholder" @input="onInput($event.target.value)"
-               class="input text-m">
-      </label>
-      <span class="input-errors">{{ errors[0] }}</span>
+      <div class="input-wrapper">
+        <label>
+          <span v-if="label" class="input-lapel-text">{{ label }}</span>
+          <input :name="name" :type="type" :value="value" :placeholder="placeholder" @input="onInput($event.target.value)"
+                 class="input text-m" :class="{error: errors.length}"/>
+        </label>
+        <span v-if="errors.length" class="input-errors">{{ errors[0] }}</span>
+      </div>
     </ValidationProvider>
   </div>
 </template>

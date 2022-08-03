@@ -99,10 +99,10 @@
           <div class="design-inputs-wrap">
             <div class="design-input-wrap">
               <div class="row">
-                <div class="col-7">
+                <div class="col-4">
                   <TheInput name="design-example" placeholder="Email address"/>
                 </div>
-                <div class="col-2 flex align-center">
+                <div class="col-4 offset-4 flex align-center">
                   <div class="text-m text-opacity">
                     Input - Empty
                   </div>
@@ -112,10 +112,10 @@
 
             <div class="design-input-wrap">
               <div class="row">
-                <div class="col-7">
+                <div class="col-4">
                   <TheInput v-model="exampleInput" name="design-example" placeholder="Email address"/>
                 </div>
-                <div class="col-2 flex align-center">
+                <div class="col-4 offset-4 flex align-center">
                   <div class="text-m text-opacity">
                     Input - Filled
                   </div>
@@ -125,12 +125,148 @@
 
             <div class="design-input-wrap">
               <div class="row">
-                <div class="col-7">
+                <div class="col-4">
                   <TheInput v-model="exampleInput" rules="required" name="design-example" placeholder="Email address"/>
                 </div>
-                <div class="col-2 flex align-center">
+                <div class="col-4 offset-4 flex align-center">
                   <div class="text-m text-opacity">
                     Input - Active
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="design-input-wrap">
+              <div class="row">
+                <div class="col-4">
+                  <TheInput v-model="errorInput" rules="required" name="error input" placeholder="Email address"/>
+                </div>
+                <div class="col-4 offset-4 flex align-center">
+                  <div class="text-m text-opacity">
+                    Input - Error
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="design-buttons-wrap">
+            <div class="design-btn">
+              <div class="row align-center">
+                <div class="col-4">
+                  <button class="btn">
+                    Login to your account
+                  </button>
+                </div>
+                <div class="col-4 offset-4 al">
+                  <div class="text-m text-opacity">Button - Idle</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="design-btn">
+              <div class="row align-center">
+                <div class="col-4">
+                  <button class="btn hover">
+                    Login to your account
+                  </button>
+                </div>
+                <div class="col-4 offset-4 al">
+                  <div class="text-m text-opacity">Button - hover</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="design-films-wrap">
+            <div class="row">
+              <div class="col-4">
+                <div class="movie-wrap">
+                  <div class="movie">
+                    <img src="~/assets/img/movies/movie1.jpg" class="movie-img" alt="movie">
+
+                      <button class="bookmark">
+                        <span class="bookmark-bg"></span>
+                        <Icon src="bookmark" width="12" height="14" color="#fff" class="bookmark-icon"/>
+                      </button>
+                  </div>
+
+                  <div class="movie-title text-m text-opacity">
+                    Bookmark Icon - Idle
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="movie-wrap">
+                  <div class="movie">
+                    <img src="~/assets/img/movies/movie1.jpg" class="movie-img" alt="movie">
+
+                      <button class="bookmark hover">
+                        <span class="bookmark-bg"></span>
+                        <Icon src="bookmark" width="12" height="14" color="#fff" class="bookmark-icon"/>
+                      </button>
+                  </div>
+
+                  <div class="movie-title text-m text-opacity">
+                    Bookmark Icon - Hover
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="movie-wrap">
+                  <div class="movie">
+                    <img src="~/assets/img/movies/movie1.jpg" class="movie-img" alt="movie">
+
+                      <button class="bookmark active">
+                        <span class="bookmark-bg"></span>
+                        <Icon src="bookmark-fill" width="12" height="14" color="#fff" class="bookmark-icon"/>
+                      </button>
+                  </div>
+
+                  <div class="movie-title text-m text-opacity">
+                    Bookmark Icon - Active
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-4">
+                <div class="movie-wrap">
+                  <div class="movie">
+                    <img src="~/assets/img/movies/movie2.jpg" class="movie-img" alt="movie">
+
+                    <div class="movie-play">
+                      <button class="movie-play-btn">
+                        <Icon src="play" width="30" height="30" class="movie-play-icon"/>
+                        <span class="movie-play-btn-name">Play</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="movie-title text-m text-opacity">
+                    Bookmark Icon - Idle
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="movie-wrap">
+                  <div class="movie hover">
+                    <img src="~/assets/img/movies/movie2.jpg" class="movie-img" alt="movie">
+
+                    <div class="movie-play">
+                      <button class="movie-play-btn">
+                        <Icon src="play" width="30" height="30" class="movie-play-icon"/>
+                        <span class="movie-play-btn-name">Play</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="movie-title text-m text-opacity">
+                    Bookmark Icon - Hover
                   </div>
                 </div>
               </div>
@@ -139,12 +275,13 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
-import Icon from "../components/icon";
-import TheInput from "../components/form/the-input";
+import Icon from "../components/Icon";
+import TheInput from "../components/form/The-input";
 
 export default {
   name: 'design-components',
@@ -152,6 +289,7 @@ export default {
   data() {
     return {
       exampleInput: 'john@example.com',
+      errorInput: '',
 
       colors: [
         {
