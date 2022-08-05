@@ -96,6 +96,18 @@ body {
   line-height: 16.38px;
 }
 
+.link {
+  font-family: "Outfit-Light", sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+  color: $logo-color;
+  cursor: pointer;
+
+  &:hover{
+    color: #fff;
+  }
+}
+
 .flex {
   display: flex;
 }

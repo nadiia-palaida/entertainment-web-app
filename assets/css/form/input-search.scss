@@ -1,0 +1,35 @@
+.input {
+  &-search {
+    padding: 0 0 14px 0;
+    font-family: "Outfit-Light", sans-serif;
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 1px solid transparent;
+
+    &:focus {
+      border-color: $border-color;
+    }
+
+    &::placeholder {
+      font-family: "Outfit-Light", sans-serif;
+      font-size: 24px;
+      color: #fff;
+      opacity: 0.5;
+    }
+
+    &-wrap {
+      display: flex;
+      align-items: flex-start;
+
+      &.focus {
+        .input-search {
+          border-color: $border-color;
+        }
+      }
+    }
+
+    &-icon {
+      margin-right: 24px;
+    }
+  }
+}

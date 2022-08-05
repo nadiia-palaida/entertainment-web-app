@@ -10,13 +10,13 @@
 
     <div class="design-block">
       <div class="row">
-        <div class="col-3">
-          <div class="title-l">Color</div>
+        <div class="col-sm-12 col-xl-3 col-lg-3 col-md-3">
+          <div class="title-l design-block-title">Color</div>
         </div>
 
-        <div class="col-9">
+        <div class="col-sm-12 col-xl-9 col-lg-9 col-md-9">
           <div class="row">
-            <div v-for="item in colors" class="col-4">
+            <div v-for="item in colors" class="col-sm-6 col-xl-4 col-lg-4 col-md-4">
               <div class="design-color-block">
                 <div class="design-color" :style="`background: #${item.name}`"></div>
 
@@ -36,8 +36,6 @@
                 </div>
               </div>
             </div>
-            <div class="col-4"></div>
-            <div class="col-4"></div>
           </div>
         </div>
       </div>
@@ -45,31 +43,34 @@
 
     <div class="design-block">
       <div class="row">
-        <div class="col-3">
-          <div class="title-l">Typography</div>
+        <div class="col-sm-12 col-xl-3 col-lg-3 col-md-3">
+          <div class="title-l design-block-title">Typography</div>
         </div>
-        <div class="col-9">
+        <div class="col-sm-12 col-xl-9 col-lg-9 col-md-9">
           <div class="row">
-            <div class="col-6">
+            <div class="col-xl-6 col-lg-6 col-md-6">
               <div class="design-typography-item">
                 <div class="design-typography-text-title text-m text-opacity"> Heading (L) - Outfit Light - 32px</div>
                 <div class="design-typography-text title-l"> Lorem ipsum dolor sit amet</div>
               </div>
+
               <div class="design-typography-item">
                 <div class="design-typography-text-title text-m text-opacity"> Heading (M) - Outfit Light - 24px</div>
                 <div class="design-typography-text title-m">Consectetuer adipiscing elit</div>
               </div>
+
               <div class="design-typography-item">
                 <div class="design-typography-text-title text-m text-opacity"> Heading (S) - Outfit Medium - 24px</div>
                 <div class="design-typography-text title-s">Donec odio quisque volutpat mattis eros</div>
               </div>
+
               <div class="design-typography-item">
                 <div class="design-typography-text-title text-m text-opacity"> Heading (XS) - Outfit Medium - 18px</div>
                 <div class="design-typography-text title-xs">Nullam malesuada erat ut turpis</div>
               </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-xl-6 col-lg-6 col-md-6">
               <div class="design-typography-item design-typography-item-text">
                 <div class="design-typography-text-title text-m text-opacity"> Body (M) - Outfit Light - 15px</div>
                 <div class="design-typography-text text-m"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
@@ -78,6 +79,7 @@
                   blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
                 </div>
               </div>
+
               <div class="design-typography-item">
                 <div class="design-typography-text-title text-m text-opacity"> Body (S) - Outfit Light - 13px</div>
                 <div class="design-typography-text text-s"> Sed pretium, ligula sollicitudin laoreet viverra, tortor
@@ -92,18 +94,61 @@
 
     <div class="design-block">
       <div class="row">
-        <div class="col-3">
-          <div class="title-l">Interactive Elements</div>
+        <div class="col-sm-12 col-xl-3 col-lg-3 col-md-3">
+          <div class="title-l design-block-title">Interactive Elements</div>
         </div>
-        <div class="col-9">
+
+        <div class="col-sm-12 col-xl-9 col-lg-9 col-md-9">
+          <div class="design-search-inputs">
+            <div class="design-search-input">
+              <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                  <TheInputSearch name="search" placeholder="Search for movies or TV series"/>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                  <div class="text-m text-opacity design-input-label">
+                    Search - Empty
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="design-search-input">
+              <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                  <TheInputSearch v-model="search" name="search" placeholder="Search for movies or TV series"
+                                  class="focus"/>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                  <div class="text-m text-opacity design-input-label">
+                    Search - Active
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="design-search-input">
+              <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                  <TheInputSearch v-model="search" name="search" placeholder="Search for movies or TV series"/>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                  <div class="text-m text-opacity design-input-label">
+                    Search - Filled
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="design-inputs-wrap">
             <div class="design-input-wrap">
               <div class="row">
-                <div class="col-4">
+                <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12">
                   <TheInput name="design-example" placeholder="Email address"/>
                 </div>
-                <div class="col-4 offset-4 flex align-center">
-                  <div class="text-m text-opacity">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 offset-xl-4 offset-lg-4 offset-md-0 offset-sm-0 flex align-center">
+                  <div class="text-m text-opacity design-input-label">
                     Input - Empty
                   </div>
                 </div>
@@ -112,11 +157,11 @@
 
             <div class="design-input-wrap">
               <div class="row">
-                <div class="col-4">
+                <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12">
                   <TheInput v-model="exampleInput" name="design-example" placeholder="Email address"/>
                 </div>
-                <div class="col-4 offset-4 flex align-center">
-                  <div class="text-m text-opacity">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 offset-xl-4 offset-lg-4 offset-md-0 offset-sm-0 flex align-center">
+                  <div class="text-m text-opacity design-input-label">
                     Input - Filled
                   </div>
                 </div>
@@ -125,11 +170,11 @@
 
             <div class="design-input-wrap">
               <div class="row">
-                <div class="col-4">
+                <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12">
                   <TheInput v-model="exampleInput" rules="required" name="design-example" placeholder="Email address"/>
                 </div>
-                <div class="col-4 offset-4 flex align-center">
-                  <div class="text-m text-opacity">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 offset-xl-4 offset-lg-4 offset-md-0 offset-sm-0 flex align-center">
+                  <div class="text-m text-opacity design-input-label">
                     Input - Active
                   </div>
                 </div>
@@ -138,11 +183,11 @@
 
             <div class="design-input-wrap">
               <div class="row">
-                <div class="col-4">
+                <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12">
                   <TheInput v-model="errorInput" rules="required" name="error input" placeholder="Email address"/>
                 </div>
-                <div class="col-4 offset-4 flex align-center">
-                  <div class="text-m text-opacity">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 offset-xl-4 offset-lg-4 offset-md-0 offset-sm-0 flex align-center">
+                  <div class="text-m text-opacity design-input-label">
                     Input - Error
                   </div>
                 </div>
@@ -153,26 +198,26 @@
           <div class="design-buttons-wrap">
             <div class="design-btn">
               <div class="row align-center">
-                <div class="col-4">
+                <div class="col-xl-4 col-lg-4 col-md-8 col-sm-8">
                   <button class="btn">
                     Login to your account
                   </button>
                 </div>
-                <div class="col-4 offset-4 al">
-                  <div class="text-m text-opacity">Button - Idle</div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 offset-xl-4 offset-lg-4 offset-md-0 offset-sm-0 al">
+                  <div class="text-m text-opacity design-button-label">Button - Idle</div>
                 </div>
               </div>
             </div>
 
             <div class="design-btn">
               <div class="row align-center">
-                <div class="col-4">
+                <div class="col-xl-4 col-lg-4 col-md-8 col-sm-8">
                   <button class="btn hover">
                     Login to your account
                   </button>
                 </div>
-                <div class="col-4 offset-4 al">
-                  <div class="text-m text-opacity">Button - hover</div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 offset-xl-4 offset-lg-4 offset-md-0 offset-sm-0 al">
+                  <div class="text-m text-opacity design-button-label">Button - hover</div>
                 </div>
               </div>
             </div>
@@ -180,15 +225,15 @@
 
           <div class="design-films-wrap">
             <div class="row">
-              <div class="col-4">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <div class="movie-wrap">
                   <div class="movie">
                     <img src="~/assets/img/movies/movie1.jpg" class="movie-img" alt="movie">
 
-                      <button class="bookmark">
-                        <span class="bookmark-bg"></span>
-                        <Icon src="bookmark" width="12" height="14" color="#fff" class="bookmark-icon"/>
-                      </button>
+                    <button class="bookmark">
+                      <span class="bookmark-bg"></span>
+                      <Icon src="bookmark" width="12" height="14" color="#fff" class="bookmark-icon"/>
+                    </button>
                   </div>
 
                   <div class="movie-title text-m text-opacity">
@@ -197,15 +242,15 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <div class="movie-wrap">
                   <div class="movie">
                     <img src="~/assets/img/movies/movie1.jpg" class="movie-img" alt="movie">
 
-                      <button class="bookmark hover">
-                        <span class="bookmark-bg"></span>
-                        <Icon src="bookmark" width="12" height="14" color="#fff" class="bookmark-icon"/>
-                      </button>
+                    <button class="bookmark hover">
+                      <span class="bookmark-bg"></span>
+                      <Icon src="bookmark" width="12" height="14" color="#fff" class="bookmark-icon"/>
+                    </button>
                   </div>
 
                   <div class="movie-title text-m text-opacity">
@@ -214,15 +259,15 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <div class="movie-wrap">
                   <div class="movie">
                     <img src="~/assets/img/movies/movie1.jpg" class="movie-img" alt="movie">
 
-                      <button class="bookmark active">
-                        <span class="bookmark-bg"></span>
-                        <Icon src="bookmark-fill" width="12" height="14" color="#fff" class="bookmark-icon"/>
-                      </button>
+                    <button class="bookmark active">
+                      <span class="bookmark-bg"></span>
+                      <Icon src="bookmark-fill" width="12" height="14" color="#fff" class="bookmark-icon"/>
+                    </button>
                   </div>
 
                   <div class="movie-title text-m text-opacity">
@@ -233,7 +278,7 @@
             </div>
 
             <div class="row">
-              <div class="col-4">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <div class="movie-wrap">
                   <div class="movie">
                     <img src="~/assets/img/movies/movie2.jpg" class="movie-img" alt="movie">
@@ -252,7 +297,7 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
                 <div class="movie-wrap">
                   <div class="movie hover">
                     <img src="~/assets/img/movies/movie2.jpg" class="movie-img" alt="movie">
@@ -282,14 +327,16 @@
 <script>
 import Icon from "../components/Icon";
 import TheInput from "../components/form/The-input";
+import TheInputSearch from "../components/form/The-input-search";
 
 export default {
   name: 'design-components',
-  components: {Icon, TheInput},
+  components: {TheInputSearch, Icon, TheInput},
   data() {
     return {
       exampleInput: 'john@example.com',
       errorInput: '',
+      search: 'Beyond Earth',
 
       colors: [
         {

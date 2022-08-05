@@ -78,7 +78,7 @@
   }
 }
 
-.design-inputs-wrap, .design-buttons-wrap {
+.design-inputs-wrap, .design-buttons-wrap, .design-search-inputs {
   margin-bottom: 80px;
 }
 
@@ -87,6 +87,28 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.design-search-input {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px){
+  .design-block-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .design-input-label {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .design-button-label {
+    text-align: center;
   }
 }
 

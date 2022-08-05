@@ -1,15 +1,18 @@
 <template>
   <div class="input-wrap">
-    <ValidationProvider :rules="rules" v-slot="{ errors }">
-      <div class="input-wrapper">
-        <label>
-          <span v-if="label" class="input-lapel-text">{{ label }}</span>
-          <input :name="name" :type="type" :value="value" :placeholder="placeholder" @input="onInput($event.target.value)"
-                 class="input text-m" :class="{error: errors.length}"/>
-        </label>
-        <span v-if="errors.length" class="input-errors">{{ errors[0] }}</span>
-      </div>
-    </ValidationProvider>
+    <client-only>
+      <ValidationProvider :rules="rules" v-slot="{ errors }">
+        <div class="input-wrapper">
+          <label>
+            <span v-if="label" class="input-lapel-text">{{ label }}</span>
+            <input :name="name" :type="type" :value="value" :placeholder="placeholder"
+                   @input="onInput($event.target.value)"
+                   class="input text-m" :class="{error: errors.length}"/>
+          </label>
+          <span v-if="errors.length" class="input-errors">{{ errors[0] }}</span>
+        </div>
+      </ValidationProvider>
+    </client-only>
   </div>
 </template>
 

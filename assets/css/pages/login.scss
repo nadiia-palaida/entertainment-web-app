@@ -1,0 +1,46 @@
+.login {
+  &-top {
+    margin-bottom: 83px;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      padding-top: 78px;
+    }
+  }
+
+  &-form {
+    margin: auto;
+    width: 400px;
+
+    &-wrap {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &-input {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-inputs {
+    margin-bottom: 40px;
+  }
+
+  &-btn {
+    margin-bottom: 24px;
+  }
+
+  &-label {
+    display: flex;
+    justify-content: center;
+
+    &-text {
+      margin-right: 9px;
+    }
+  }
+}
