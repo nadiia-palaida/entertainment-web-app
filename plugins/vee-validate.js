@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import { ValidationProvider, ValidationObserver } from 'vee-validate';
+import { setInteractionMode } from 'vee-validate';
 
 import { extend } from 'vee-validate';
 import { required, email, numeric, is } from 'vee-validate/dist/rules';
+
+
+setInteractionMode('lazy');
 
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);

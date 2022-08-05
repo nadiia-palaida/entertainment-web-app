@@ -11,7 +11,7 @@
 
       <div class="login-form-wrap">
         <div class="login-form">
-          <TheForm title="Login" :handle="login">
+          <TheForm title="Sign up" :handle="login">
             <div class="login-inputs">
               <div class="login-input">
                 <TheInput name="email" v-model="sendData.email" rules="required|email" placeholder="Email address"/>
@@ -26,11 +26,11 @@
               </div>
             </div>
 
-            <button class="btn login-btn">Login to your account</button>
+            <button class="btn login-btn">Create an account</button>
 
             <div class="login-label">
-              <span class="login-label-text text-m">Don’t have an account?</span>
-              <div class="link"> Sign Up</div>
+              <span class="login-label-text text-m">Already have an account?</span>
+              <NuxtLink to="login" class="link">Login</NuxtLink>
             </div>
           </TheForm>
         </div>
@@ -45,6 +45,7 @@ import TheInput from "../components/form/The-input";
 
 export default {
   name: "login",
+  layout: 'login',
   components: {TheInput, TheForm},
   data() {
     return {

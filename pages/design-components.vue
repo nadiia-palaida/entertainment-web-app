@@ -320,7 +320,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -331,6 +330,7 @@ import TheInputSearch from "../components/form/The-input-search";
 
 export default {
   name: 'design-components',
+  layout: 'login',
   components: {TheInputSearch, Icon, TheInput},
   data() {
     return {

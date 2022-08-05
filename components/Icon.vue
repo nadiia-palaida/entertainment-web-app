@@ -9,7 +9,7 @@ export default {
   name: "Icon",
   props: {
     src: {type: String, required: true},
-    color: {type: String, default: '#000'},
+    color: {type: String},
     width: {type: String, default: '20px'},
     height: {type: String, default: '20px'}
   },

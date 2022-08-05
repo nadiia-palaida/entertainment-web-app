@@ -6,7 +6,7 @@
           <label>
             <span v-if="label" class="input-lapel-text">{{ label }}</span>
             <input :name="name" :type="type" :value="value" :placeholder="placeholder"
-                   @input="onInput($event.target.value)"
+                   @input="onInput($event.target.value)" autocomplete="off"
                    class="input text-m" :class="{error: errors.length}"/>
           </label>
           <span v-if="errors.length" class="input-errors">{{ errors[0] }}</span>

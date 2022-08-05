@@ -6,6 +6,10 @@ div, p, span, input, button, h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -34,7 +38,7 @@ div, p, span, input, button, h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1372px;
   }
 }
 
@@ -259,6 +263,28 @@ body {
 
     &-icon {
       margin-right: 19px;
+    }
+  }
+}
+
+.main {
+  display: flex;
+
+  &-search {
+    padding-top: 64px;
+  }
+}
+
+.content {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+
+    &-search {
+      padding-top: 0;
     }
   }
 }

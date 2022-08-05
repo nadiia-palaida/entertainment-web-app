@@ -26,7 +26,7 @@
 
             <div class="login-label">
               <span class="login-label-text text-m">Don’t have an account?</span>
-              <div class="link"> Sign Up</div>
+              <NuxtLink to="sign-up" class="link">Sign Up</NuxtLink>
             </div>
           </TheForm>
         </div>
@@ -41,6 +41,7 @@ import TheInput from "../components/form/The-input";
 
 export default {
   name: "login",
+  layout: 'login',
   components: {TheInput, TheForm},
   data() {
     return {
