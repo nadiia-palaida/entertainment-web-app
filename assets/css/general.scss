@@ -272,11 +272,12 @@ body {
 
   &-search {
     padding-top: 64px;
+    margin-bottom: 34px;
   }
 }
 
 .content {
-  width: 100%;
+  width: calc(100% - 132px);
 }
 
 @media screen and (max-width: 768px) {
@@ -285,6 +286,19 @@ body {
 
     &-search {
       padding-top: 0;
+      margin-bottom: 24px;
     }
   }
+
+  .content {
+    width: 100%;
+  }
+
+  .title-s {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
 }

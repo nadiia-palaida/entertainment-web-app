@@ -4,9 +4,14 @@
 @import "bootstrap-grid";
 @import "general";
 @import "menu";
+
 @import "form/select";
 @import "form/form";
 @import "form/input";
 @import "form/input-search";
+
+@import "components/trending-card";
+
+@import "pages/index";
 @import "pages/design-components";
 @import "pages/login";

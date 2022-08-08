@@ -3,13 +3,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 96px;
     height: calc(100vh - 64px);
     margin: 32px 0;
     margin-right: 36px;
     padding: 35px 0 32px 0;
     background: $text-dark;
     border-radius: 20px;
+    overflow: auto;
   }
 
   &-logo {
@@ -35,6 +35,7 @@
   &-list {
     display: flex;
     flex-direction: column;
+    padding: 0 28px;
   }
 
   &-item {

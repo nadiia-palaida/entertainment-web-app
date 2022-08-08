@@ -1,0 +1,13 @@
+.trending {
+  &-title {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trending {
+    &-title {
+      font-size: 20px;
+    }
+  }
+}
