@@ -1,6 +1,6 @@
 <template>
   <div class="movie-card">
-    <div class="movie-card-img-wrap">
+    <div class="movie-card-img-wrap movie">
       <img :srcset="`${getImage(movie.thumbnail.regular.small)} 320w,
                      ${getImage(movie.thumbnail.regular.medium)} 440w,
                      ${getImage(movie.thumbnail.regular.large)} 560w,
@@ -12,6 +12,13 @@
         <Icon v-if="movie.isBookmarked" src="bookmark-fill" width="12" height="14" color="#fff" class="bookmark-icon"/>
         <Icon v-else src="bookmark" width="12" height="14" color="#fff" class="bookmark-icon"/>
       </button>
+
+      <div class="movie-play">
+        <button class="movie-play-btn">
+          <Icon src="play" width="30" height="30" class="movie-play-icon"/>
+          <span class="movie-play-btn-name">Play</span>
+        </button>
+      </div>
     </div>
 
     <div class="">
@@ -23,12 +30,10 @@
         </li>
         <li class="trending-card-info-item trending-card-info-category">{{movie.rating}}</li>
       </ul>
-      <div class="trending-card-name movie-card-name title-xs">
+      <a href="#" class="trending-card-name movie-card-name title-xs">
         {{ movie.title }}
-      </div>
+      </a>
     </div>
-
-
   </div>
 </template>
 

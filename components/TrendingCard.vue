@@ -1,24 +1,34 @@
 <template>
-  <div class="trending-card">
-    <img :src="movie.img" :alt="movie.name" class="trending-card-img">
+  <div class="trending-card movie">
+    <img :srcset="`${getImage(movie.thumbnail.trending.small)} 320w,
+                     ${getImage(movie.thumbnail.trending.large)} 560w,`"
+         :src="movie.thumbnail.trending.large" :alt="movie.title" class="trending-card-img">
 
-    <button class="bookmark">
+    <button class="bookmark" :class="{active: movie.isBookmarked}">
       <span class="bookmark-bg"></span>
-      <Icon src="bookmark" width="12" height="14" color="#fff" class="bookmark-icon"/>
+      <Icon v-if="movie.isBookmarked" src="bookmark-fill" width="12" height="14" color="#fff" class="bookmark-icon"/>
+      <Icon v-else src="bookmark" width="12" height="14" color="#fff" class="bookmark-icon"/>
     </button>
+
+    <div class="movie-play">
+      <button class="movie-play-btn">
+        <Icon src="play" width="30" height="30" class="movie-play-icon"/>
+        <span class="movie-play-btn-name">Play</span>
+      </button>
+    </div>
 
     <div class="trending-card-info-wrap">
       <ul class="trending-card-info-list text-m text-opacity">
         <li class="trending-card-info-item">{{movie.year}}</li>
         <li class="trending-card-info-item">
           <Icon src="movies" width="12" height="12" class="trending-card-movie-icon"/>
-          <span>{{movie.type}}</span>
+          <span>{{movie.category}}</span>
         </li>
-        <li class="trending-card-info-item trending-card-info-category">{{movie.category}}</li>
+        <li class="trending-card-info-item trending-card-info-category">{{movie.rating}}</li>
       </ul>
-      <div class="trending-card-name title-s">
-        {{ movie.name }}
-      </div>
+      <a href="#" class="trending-card-name title-s">
+        {{ movie.title }}
+      </a>
     </div>
   </div>
 </template>
@@ -30,6 +40,11 @@ export default {
   components: {Icon},
   props: {
     movie: {type: Object, required: true}
+  },
+  methods: {
+    getImage(path) {
+      return require('../assets/' + path)
+    },
   }
 }
 </script>

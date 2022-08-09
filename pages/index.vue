@@ -6,7 +6,7 @@
       </div>
       <div>
         <Hooper :settings="hooperSettings">
-          <slide v-for="(item, index) in movieTrends" :key="`trending-slide-${index}`">
+          <slide v-for="(item, index) in trendingMovies" :key="`trending-slide-${index}`">
             <div>
               <TrendingCard :movie="item"/>
             </div>
@@ -42,47 +42,13 @@ export default {
   computed: {
     allMovies() {
       return this.$store.getters['movies/allMovies']
+    },
+    trendingMovies() {
+      return this.$store.getters['movies/trendingMovies']
     }
   },
   data() {
     return {
-      movieTrends: [
-        {
-          name: 'Beyond Earth',
-          img: require('../assets/img/movies/trends/movie1.jpg'),
-          year: '2019',
-          type: 'Movie',
-          category: 'pg'
-        },
-        {
-          name: 'Bottom Gear',
-          img: require('../assets/img/movies/trends/movie2.jpg'),
-          year: '2021',
-          type: 'Movie',
-          category: 'pg'
-        },
-        {
-          name: 'Undiscovered Cities',
-          img: require('../assets/img/movies/trends/movie3.jpg'),
-          year: '2019',
-          type: 'TV Series',
-          category: 'e'
-        },
-        {
-          name: '1998',
-          img: require('../assets/img/movies/trends/movie4.jpg'),
-          year: '2021',
-          type: 'Movie',
-          category: '18+'
-        },
-        {
-          name: 'Dark Side Of The Moon',
-          img: require('../assets/img/movies/trends/movie5.jpg'),
-          year: '2018',
-          type: 'TV Series',
-          category: 'pg'
-        },
-      ],
       hooperSettings: {
         itemsToShow: 2.5,
         autoPlay: true,
@@ -103,9 +69,10 @@ export default {
             itemsToShow: 1.5,
           },
         }
-      }
+      },
+      trendMovies: []
     }
-  }
+  },
 }
 </script>
 

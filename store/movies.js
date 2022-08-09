@@ -9,6 +9,9 @@ export const state = () => ({
 export const getters = {
   allMovies: state => {
     return state.all
+  },
+  trendingMovies: state => {
+    return state.all.filter(movie => movie.isTrending === true)
   }
 }
 
@@ -17,11 +20,6 @@ export const actions = {
   getAllMovies ({ commit }) {
     commit('setMovies', movies)
   },
-  getMovies ({ commit }) {
-    let movies1 = ['dcfd', 'sdcdsc']
-    commit('setMovies', movies1)
-  },
-
 }
 
 // mutations
