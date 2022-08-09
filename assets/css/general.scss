@@ -280,7 +280,7 @@ body {
   width: calc(100% - 132px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .main {
     flex-direction: column;
 
@@ -299,6 +299,8 @@ body {
   }
 }
 
-@media screen and (max-width: 576px) {
-
+@media screen and (max-width: 768px) {
+  .title-xs {
+    font-size: 14px;
+  }
 }

@@ -1,0 +1,34 @@
+.movie-card {
+  width: 100%;
+  margin-bottom: 32px;
+
+  &-img {
+    width: 100%;
+    border-radius: 8px;
+
+    &-wrap {
+      position: relative;
+      margin-bottom: 8px;
+      border-radius: 8px;
+    }
+  }
+
+  &-info {
+    &-list {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+ .movie-card {
+   margin-bottom: 16px;
+
+   &-info {
+     &-list {
+       font-size: 11px;
+       margin-bottom: 4px;
+     }
+   }
+ }
+}

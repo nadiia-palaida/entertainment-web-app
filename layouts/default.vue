@@ -24,6 +24,6 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss">
+@import "assets/css/variables.scss";
 </style>

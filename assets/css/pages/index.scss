@@ -1,6 +1,16 @@
 .trending {
+  &-wrap {
+    margin-bottom: 40px;
+  }
+
   &-title {
     margin-bottom: 25px;
+  }
+}
+
+.recommended {
+  &-title {
+    margin-bottom: 32px;
   }
 }
 
