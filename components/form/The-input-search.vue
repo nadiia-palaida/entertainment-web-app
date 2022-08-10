@@ -3,13 +3,15 @@
     <div class="input-search-icon">
       <Icon src="search" width="32" height="32" class="input-search-icon"/>
     </div>
-    <input :name="name" :type="type" :value="value" :placeholder="placeholder" @input="onInput($event.target.value)"
+    <input :name="name" :type="type" :value="value" :placeholder="placeholder" @change="onChange($event.target.value)"
            autocomplete="off" class="input input-search"/>
   </div>
 </template>
 
 <script>
 import Icon from "../Icon";
+import {mapMutations} from "vuex";
+
 export default {
   name: 'the-input-search',
   components: {Icon},
@@ -20,8 +22,14 @@ export default {
     value: {}
   },
   methods: {
-    onInput(value) {
-      this.$emit('input', value)
+    ...mapMutations(
+      {
+        startSearch: 'movies/startSearch',
+      }
+    ),
+    onChange(value) {
+      this.startSearch(value)
+      this.$router.push({path: 'search'})
     }
   }
 }

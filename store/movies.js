@@ -2,7 +2,9 @@ import movies from '../api/movies'
 
 // initial state
 export const state = () => ({
-  all: []
+  all: [],
+  search: '',
+  searchResults: []
 })
 
 // getters
@@ -24,6 +26,13 @@ export const getters = {
   },
   trendingMovies: state => {
     return state.all.filter(movie => movie.isTrending === true)
+  },
+
+  searchValue: state => {
+    return state.search
+  },
+  searchResultsArr: state => {
+    return state.searchResults
   }
 }
 
@@ -33,16 +42,21 @@ export const mutations = {
     state.all = movies
   },
   toggleBookmarked(state, id) {
-    console.log('movie', id)
-
     state.all.forEach(movie => {
       if (movie.id === id) {
-        console.log('movie', movie)
-
         movie.isBookmarked = !movie.isBookmarked
       }
     })
   },
+
+  setSearch(state, search) {
+    state.search = search
+  },
+  startSearch(state, search) {
+    state.search = search
+
+    state.searchResults = state.all.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
+  }
 }
 
 // actions

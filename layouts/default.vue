@@ -4,7 +4,7 @@
       <Menu/>
 
       <div class="content">
-        <TheInputSearch name="search" v-model="search" placeholder="Search for movies or TV series" class="main-search"/>
+        <TheInputSearch name="search" placeholder="Search for movies or TV series" class="main-search"/>
         <Nuxt />
       </div>
     </div>
