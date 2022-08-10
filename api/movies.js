@@ -1,5 +1,5 @@
 const _movies = [
-  {
+  { "id": 1,
     "title": "Beyond Earth",
     "thumbnail": {
       "trending": {
@@ -18,7 +18,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": true
   },
-  {
+  { "id": 2,
     "title": "Bottom Gear",
     "thumbnail": {
       "trending": {
@@ -37,7 +37,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": true
   },
-  {
+  { "id": 3,
     "title": "Undiscovered Cities",
     "thumbnail": {
       "trending": {
@@ -56,7 +56,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": true
   },
-  {
+  { "id": 4,
     "title": "1998",
     "thumbnail": {
       "trending": {
@@ -75,7 +75,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": true
   },
-  {
+  { "id": 5,
     "title": "Dark Side of the Moon",
     "thumbnail": {
       "trending": {
@@ -94,7 +94,7 @@ const _movies = [
     "isBookmarked": true,
     "isTrending": true
   },
-  {
+  { "id": 6,
     "title": "The Great Lands",
     "thumbnail": {
       "regular": {
@@ -109,7 +109,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 7,
     "title": "The Diary",
     "thumbnail": {
       "regular": {
@@ -124,7 +124,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 8,
     "title": "Earth’s Untouched",
     "thumbnail": {
       "regular": {
@@ -139,7 +139,7 @@ const _movies = [
     "isBookmarked": true,
     "isTrending": false
   },
-  {
+  { "id": 9,
     "title": "No Land Beyond",
     "thumbnail": {
       "regular": {
@@ -154,7 +154,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 10,
     "title": "During the Hunt",
     "thumbnail": {
       "regular": {
@@ -169,7 +169,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 11,
     "title": "Autosport the Series",
     "thumbnail": {
       "regular": {
@@ -184,7 +184,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 12,
     "title": "Same Answer II",
     "thumbnail": {
       "regular": {
@@ -199,7 +199,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 13,
     "title": "Below Echo",
     "thumbnail": {
       "regular": {
@@ -214,7 +214,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 14,
     "title": "The Rockies",
     "thumbnail": {
       "regular": {
@@ -229,7 +229,7 @@ const _movies = [
     "isBookmarked": true,
     "isTrending": false
   },
-  {
+  { "id": 15,
     "title": "Relentless",
     "thumbnail": {
       "regular": {
@@ -244,7 +244,7 @@ const _movies = [
     "isBookmarked": true,
     "isTrending": false
   },
-  {
+  { "id": 16,
     "title": "Community of Ours",
     "thumbnail": {
       "regular": {
@@ -259,7 +259,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 17,
     "title": "Van Life",
     "thumbnail": {
       "regular": {
@@ -274,7 +274,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 18,
     "title": "The Heiress",
     "thumbnail": {
       "regular": {
@@ -289,7 +289,7 @@ const _movies = [
     "isBookmarked": true,
     "isTrending": false
   },
-  {
+  { "id": 19,
     "title": "Off the Track",
     "thumbnail": {
       "regular": {
@@ -304,7 +304,7 @@ const _movies = [
     "isBookmarked": true,
     "isTrending": false
   },
-  {
+  { "id": 20,
     "title": "Whispering Hill",
     "thumbnail": {
       "regular": {
@@ -319,7 +319,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 21,
     "title": "112",
     "thumbnail": {
       "regular": {
@@ -334,7 +334,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 22,
     "title": "Lone Heart",
     "thumbnail": {
       "regular": {
@@ -349,7 +349,7 @@ const _movies = [
     "isBookmarked": true,
     "isTrending": false
   },
-  {
+  { "id": 23,
     "title": "Production Line",
     "thumbnail": {
       "regular": {
@@ -364,7 +364,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 24,
     "title": "Dogs",
     "thumbnail": {
       "regular": {
@@ -379,7 +379,7 @@ const _movies = [
     "isBookmarked": true,
     "isTrending": false
   },
-  {
+  { "id": 25,
     "title": "Asia in 24 Days",
     "thumbnail": {
       "regular": {
@@ -394,7 +394,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 26,
     "title": "The Tasty Tour",
     "thumbnail": {
       "regular": {
@@ -409,7 +409,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 27,
     "title": "Darker",
     "thumbnail": {
       "regular": {
@@ -424,7 +424,7 @@ const _movies = [
     "isBookmarked": true,
     "isTrending": false
   },
-  {
+  { "id": 28,
     "title": "Unresolved Cases",
     "thumbnail": {
       "regular": {
@@ -439,7 +439,7 @@ const _movies = [
     "isBookmarked": false,
     "isTrending": false
   },
-  {
+  { "id": 29,
     "title": "Mission: Saturn",
     "thumbnail": {
       "regular": {

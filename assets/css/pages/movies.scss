@@ -1,0 +1,13 @@
+.movies-page {
+  &-title {
+    margin-bottom: 38px;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .movies-page {
+    &-title {
+      margin-bottom: 24px;
+    }
+  }
+}

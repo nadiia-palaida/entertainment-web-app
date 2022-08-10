@@ -7,30 +7,17 @@
     </div>
 
     <ul class="menu-list">
-      <li class="menu-item">
-        <NuxtLink to="/" class="menu-link">
-          <Icon src="home" class="menu-icon"/>
+      <li v-for="item in menu" class="menu-item">
+        <NuxtLink :to="item.link" class="menu-link">
+          <Icon :src="item.icon" class="menu-icon"/>
         </NuxtLink>
-      </li>
-      <li class="menu-item">
-        <a href="#" class="menu-link">
-          <Icon src="movies" class="menu-icon"/>
-        </a>
-      </li>
-      <li class="menu-item">
-        <a href="#" class="menu-link">
-          <Icon src="tv" class="menu-icon"/>
-        </a>
-      </li>
-      <li class="menu-item">
-        <a href="#" class="menu-link">
-          <Icon src="bookmark-menu" class="menu-icon"/>
-        </a>
       </li>
     </ul>
 
     <div class="menu-account">
-      <img src="~assets/img/accounts/account1.jpg" alt="account">
+      <NuxtLink to="login">
+        <img src="~assets/img/accounts/account1.jpg" alt="account">
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -40,7 +27,29 @@ import Icon from "./Icon";
 
 export default {
   name: "Menu",
-  components: {Icon}
+  components: {Icon},
+  data() {
+    return {
+      menu: [
+        {
+          link: '/',
+          icon: 'home'
+        },
+        {
+          link: 'movies',
+          icon: 'movies'
+        },
+        {
+          link: 'tv-series',
+          icon: 'tv'
+        },
+        {
+          link: 'bookmarks',
+          icon: 'bookmark-menu'
+        },
+      ]
+    }
+  }
 }
 </script>
 

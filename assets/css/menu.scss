@@ -21,7 +21,7 @@
   &-link {
     padding: 10px;
 
-    &:hover, &.active {
+    &:hover, &.nuxt-link-exact-active {
       .menu-icon {
         color: #fff;
       }

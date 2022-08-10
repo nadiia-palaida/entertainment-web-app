@@ -1,0 +1,17 @@
+.bookmarks {
+  &-movies {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .bookmarks {
+    &-movies {
+      margin-bottom: 24px;
+    }
+  }
+}

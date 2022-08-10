@@ -7,7 +7,7 @@
           `"
            :src="movie.thumbnail.regular.large" :alt="movie.title" class="movie-card-img">
 
-      <button class="bookmark" :class="{active: movie.isBookmarked}">
+      <button @click="toggleBookmarked(movie.id)" class="bookmark" :class="{active: movie.isBookmarked}">
         <span class="bookmark-bg"></span>
         <Icon v-if="movie.isBookmarked" src="bookmark-fill" width="12" height="14" color="#fff" class="bookmark-icon"/>
         <Icon v-else src="bookmark" width="12" height="14" color="#fff" class="bookmark-icon"/>
@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <div class="">
+    <div>
       <ul class="trending-card-info-list movie-card-info-list text-m text-opacity">
         <li class="trending-card-info-item">{{movie.year}}</li>
         <li class="trending-card-info-item">
@@ -39,6 +39,7 @@
 
 <script>
 import Icon from "./Icon";
+import { mapMutations } from 'vuex'
 export default {
   name: "MovieCard",
   components: {Icon},
@@ -46,6 +47,9 @@ export default {
     movie: {type: Object, required: true}
   },
   methods: {
+    ...mapMutations({
+      toggleBookmarked: 'movies/toggleBookmarked'
+    }),
     getImage(path) {
       return require('../assets/' + path)
     },
