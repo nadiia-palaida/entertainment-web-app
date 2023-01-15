@@ -1,4 +1,6 @@
 export default {
+  ssr: false,
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'entertainment-web-app',
@@ -45,8 +47,6 @@ export default {
       scss: './assets/css/variables.scss',
     }
   },
-
-  buildDir: 'dist',
 
   router: {
     linkActiveClass: 'active'
