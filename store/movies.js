@@ -62,6 +62,7 @@ export const mutations = {
 // actions
 export const actions = {
   getAllMovies({commit}) {
+    console.log('getAllMovies')
     commit('setMovies', movies)
   }
 }
