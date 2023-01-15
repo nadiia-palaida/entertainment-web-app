@@ -33,7 +33,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-
+    '@nuxtjs/router',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -43,8 +43,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    styleResources: {
-      scss: './assets/css/variables.scss',
+    "styleResources": {
+      "scss": './assets/css/variables.scss',
     }
   },
 

@@ -8,7 +8,7 @@
 
     <ul class="menu-list">
       <li v-for="item in menu" class="menu-item">
-        <NuxtLink :to="item.link" class="menu-link">
+        <NuxtLink :to="{name: item.name}" class="menu-link">
           <Icon :src="item.icon" class="menu-icon"/>
         </NuxtLink>
       </li>
@@ -33,19 +33,23 @@ export default {
       menu: [
         {
           link: '/',
-          icon: 'home'
+          icon: 'home',
+          name: 'home'
         },
         {
           link: 'movies',
-          icon: 'movies'
+          icon: 'movies',
+          name: 'movies'
         },
         {
           link: 'tv-series',
-          icon: 'tv'
+          icon: 'tv',
+          name: 'tv-series'
         },
         {
           link: 'bookmarks',
-          icon: 'bookmark-menu'
+          icon: 'bookmark-menu',
+          name: 'bookmarks'
         },
       ]
     }
