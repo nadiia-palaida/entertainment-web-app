@@ -1,6 +1,9 @@
 export const actions = {
   nuxtServerInit({ dispatch }) {
-    console.log('nuxtServerInit')
+    dispatch('movies/getAllMovies')
+  },
+
+  nuxtClientInit({ dispatch }) {
     dispatch('movies/getAllMovies')
   }
 }
