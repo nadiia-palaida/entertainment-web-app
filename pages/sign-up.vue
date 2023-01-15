@@ -3,7 +3,7 @@
     <div class="login-wrap">
       <div class="login-top">
         <div class="logo">
-          <NuxtLink to="/">
+          <NuxtLink :to="{name: 'home'}">
             <img src="~assets/img/logo.png" alt="logo">
           </NuxtLink>
         </div>
@@ -30,7 +30,7 @@
 
             <div class="login-label">
               <span class="login-label-text text-m">Already have an account?</span>
-              <NuxtLink to="login" class="link">Login</NuxtLink>
+              <NuxtLink :to="{name: 'login'}" class="link">Login</NuxtLink>
             </div>
           </TheForm>
         </div>

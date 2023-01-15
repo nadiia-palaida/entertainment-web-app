@@ -5,6 +5,9 @@ import Home from '~/pages/index'
 import Movies from '~/pages/movies'
 import TvSeries from '~/pages/tv-series'
 import Bookmarks from '~/pages/bookmarks'
+import Login from '~/pages/login'
+import SignUp from '~/pages/sign-up'
+import Search from '~/pages/search'
 
 Vue.use(Router)
 
@@ -31,6 +34,21 @@ export function createRouter() {
         path: '/bookmarks',
         name: 'bookmarks',
         component: Bookmarks
+      },
+      {
+        path: '/login',
+        name: 'login',
+        component: Login
+      },
+      {
+        path: '/sign-up',
+        name: 'sign-up',
+        component: SignUp
+      },
+      {
+        path: '/search',
+        name: 'search',
+        component: Search
       },
     ]
   })

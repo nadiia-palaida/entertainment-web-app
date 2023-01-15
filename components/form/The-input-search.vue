@@ -29,7 +29,9 @@ export default {
     ),
     onChange(value) {
       this.startSearch(value)
-      this.$router.push({path: 'search'})
+      if(this.$route.name !== 'search') {
+        this.$router.push({name: 'search'})
+      }
     }
   }
 }

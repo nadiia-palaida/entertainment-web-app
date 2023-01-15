@@ -1,7 +1,7 @@
 <template>
   <div class="menu-wrap">
     <div class="menu-logo">
-      <NuxtLink to="/">
+      <NuxtLink :to="{name: 'home'}">
         <img src="~assets/img/logo.png" alt="logo">
       </NuxtLink>
     </div>
@@ -15,7 +15,7 @@
     </ul>
 
     <div class="menu-account">
-      <NuxtLink to="login">
+      <NuxtLink :to="{name: 'login'}">
         <img src="~assets/img/accounts/account1.jpg" alt="account">
       </NuxtLink>
     </div>
